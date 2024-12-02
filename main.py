@@ -1,12 +1,10 @@
 import typer
 
-import days.day1
-
-IMPLEMENTATIONS = {1: days.day1.run}
+import days
 
 
 def main(day: int, path: str | None = None) -> None:
-    impl = IMPLEMENTATIONS.get(day)
+    impl = days.IMPLEMENTATIONS.get(day)
     if impl is None:
         print(f"Implementation for day {day} not found.")
         return
